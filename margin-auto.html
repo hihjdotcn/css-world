@@ -14,35 +14,60 @@
 			height: 100%;
 		}
 
-		.father {
-			height: 100%;
-			background-color: olive;
+		.add {
+			margin: 100px;
+			display: inline-block;
+			width: 70px;
+			height: 70px;
+			color: #ccc;
+			border: 2px dashed;
+			text-indent: -12em;
+			transition: color .65s;
 			position: relative;
+			overflow: hidden;
+			cursor: pointer;
 		}
 
-		.son {
-			width: 100px;
-			height: 100px;
-			background-color: aqua;
+		.add:hover {
+			color: #06c;
+		}
 
+		.add::before,
+		.add::after {
+			content: '';
 			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			margin: auto;
+			top: 50%;
+			left: 50%;
+		}
+
+		.add::before {
+			width: 20px;
+			border-top: 4px solid;
+			margin: -2px 0 0 -10px;
+		}
+
+		.add::after {
+			height: 20px;
+			border-left: 4px solid;
+			margin: -10px 0 0 -2px;
+		}
+
+		.three-block {
+			margin: 100px;
+			width: 0;
+			border: 10px solid;
+			border-color: #f30 transparent transparent;
 		}
 
 	</style>
 </head>
 
 <body>
-	<div class='father'>
-		<div class='son'></div>
+	<!-- <div style="display:inline-block;border:22px solid transparent;cursor: pointer">
+		<div class='add'></div>
 	</div>
-
-
-
+	<div class='right-block'></div> -->
+	<div class='three-block'></div>
 </body>
 
 </html>
