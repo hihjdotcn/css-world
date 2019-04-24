@@ -1,0 +1,32 @@
+body,
+html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+header,
+footer {
+	height: 60px;
+	background: rgb(31, 21, 170);
+}
+
+.container {
+	height: calc(100% - 120px);
+	/* background: rgb(131, 147, 236) */
+}
+
+nav {
+	display: inline-block;
+	/* margin-right: 20px; */
+	width: 20%;
+	height: 100%;
+	background: rgb(255, 92, 160);
+}
+
+.main {
+	display: inline-block;
+	width: 80%;
+	height: 100%;
+	background: rgb(255, 168, 54);
+}
