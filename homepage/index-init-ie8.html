@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="locky">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>首页自适应布局兼容ie8</title>
+	<style lang="">
+		body,
+		html {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+		}
+
+		header,
+		footer {
+			height: 60px;
+			background: rgb(31, 21, 170);
+		}
+
+		footer {
+			z-index: 2;
+			position: relative;
+			bottom: 120px;
+			left: 0;
+			background: rgb(120, 190, 7);
+		}
+
+		.container {
+			z-index: -1;
+			position: relative;
+			top: -120px;
+			box-sizing: border-box;
+			height: 100%;
+			background: rgb(255, 92, 160);
+		}
+
+		nav {
+			position: absolute;
+			display: inline-block;
+			width: 200px;
+			height: 100%;
+			box-sizing: border-box;
+			background: rgb(255, 92, 160);
+		}
+
+		.main {
+			display: inline-block;
+			padding-left: 200px;
+			box-sizing: border-box;
+			width: 100%;
+			height: 100%;
+			background: rgb(255, 168, 54);
+		}
+	</style>
+</head>
+
+<body>
+	<header></header>
+	<div class="container">
+		<nav></nav>
+		<div class="main">
+
+		</div>
+	</div>
+	<footer></footer>
+
+</body>
+
+</html>
