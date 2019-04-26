@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="../styles/reset.css">
+	<style>
+		.main {
+			width: 100%;
+			display: grid;
+			grid-template-columns: [col1] 100px [col2]1fr [col3]2fr [col4]2fr;
+			grid-template-rows: 210px 270px 300px;
+			row-gap: 10px;
+			/* column-gap: 10px; */
+		}
+
+		.box {
+			width: 30px;
+			font-size: 24px;
+			text-align: center;
+			color: aliceblue;
+			padding: 10px;
+			box-sizing: border-box;
+			border: 5px solid #ffcc00;
+			outline: 10px solid #1f126d;
+		}
+
+		.box1 {
+			height: 100%;
+			background: red;
+		}
+
+		.box2 {
+			background: blueviolet;
+		}
+
+		.box3 {
+			background: greenyellow;
+		}
+
+		.box4 {
+			background: rgb(199, 29, 128);
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class='main'>
+		<div class="box box1">1</div>
+		<div class="box box2">2</div>
+		<div class="box box3">3</div>
+		<div class="box box4">4</div>
+		<div class="box box3">5</div>
+		<div class="box box2">6</div>
+		<div class="box box1">7</div>
+	</div>
+</body>
+
+</html>

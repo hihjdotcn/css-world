@@ -6,36 +6,57 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="locky">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>首页自适应布局flex</title>
+	<title>首页自适应布局Grid</title>
 	<link rel="stylesheet" href="../styles/reset.css">
 	<style>
 		body {
-			display: flex;
-			flex-direction: column;
+			display: grid;
+			grid-template-columns: 3;
+			grid-template-rows: 60px 1fr 60px;
 		}
 
 		header,
 		footer {
-			height: 60px;
 			background: rgb(20, 179, 171);
+			grid-column: 1/4
 		}
 
 		.container {
-			flex-grow: 1;
+			grid-column: 1/4;
+			display: grid;
 			background: rgb(75, 78, 231);
-			display: flex;
+			grid-template-columns: 200px 1fr;
 		}
 
 		nav {
-			width: 200px;
-			height: 100%;
 			background: rgb(255, 92, 160);
 		}
 
 		.main {
-			flex-grow: 1;
-			height: 100%;
 			background: rgb(179, 197, 19);
+			padding: 10px;
+			box-sizing: border-box;
+		}
+
+		section {
+			height: 1900px;
+			background-color: brown;
+		}
+
+		article {
+			color: aliceblue;
+			font: 24px/36px '';
+			padding: 20px 20px 0 100px;
+			/* 单字母折行
+			word-break: break-all; */
+
+			/* 省略号 */
+			width: 140px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+
 		}
 
 	</style>
@@ -46,7 +67,9 @@
 	<div class="container">
 		<nav>nav menu</nav>
 		<div class="main">
-			<div>my content</div>
+			<section>
+				<article>Welcome to Songjiang!</article>
+			</section>
 		</div>
 	</div>
 	<footer>footer content</footer>
